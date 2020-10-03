@@ -1,0 +1,16 @@
+import XMonad
+import XMonad.Config.Desktop
+
+main = do
+  xmonad $ desktopConfig
+    { terminal    = myTerminal
+    , modMask     = myModMask
+    , normalBorderColor = "yellow"
+    , focusedBorderColor = "green"
+    , borderWidth = myBorderWidth
+    }
+
+myTerminal    = "alacritty"
+myModMask     = mod4Mask -- Win key or Super_L
+myBorderWidth = 1
+
